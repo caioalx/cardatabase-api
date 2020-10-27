@@ -14,8 +14,7 @@
 	<name>cardatabase</name>
 	<description>Packt example project</description>
 
-	<!-- Para deploy -->
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>

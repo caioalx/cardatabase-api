@@ -1,12 +1,9 @@
 package com.packt.cardatabase;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 import com.packt.cardatabase.domain.car.model.Car;
@@ -17,7 +14,7 @@ import com.packt.cardatabase.infra.security.model.User;
 import com.packt.cardatabase.infra.security.repository.UserRepository;
 
 @SpringBootApplication
-public class CardatabaseApplication extends SpringBootServletInitializer {
+public class CardatabaseApplication {
 
 	@Autowired
 	private CarRepository carRepository;
@@ -27,11 +24,6 @@ public class CardatabaseApplication extends SpringBootServletInitializer {
 	
 	@Autowired
 	private UserRepository userRepository;
-	
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(ApplicationArguments.class);
-	}
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
